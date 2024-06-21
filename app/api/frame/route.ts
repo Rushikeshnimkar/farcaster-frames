@@ -34,17 +34,9 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `State: ${state?.page || 0}`,
+          label: 'Next',
         },
-        {
-          action: 'link',
-          label: 'OnchainKit',
-          target: 'https://onchainkit.xyz',
-        },
-        {
-          action: 'post_redirect',
-          label: 'Dog pictures',
-        },
+      
       ],
       image: {
         src: `${NEXT_PUBLIC_URL}/park-1.png`,
