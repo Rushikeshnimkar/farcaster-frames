@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
@@ -39,7 +39,7 @@ const Page = () => {
     },
     input: {
       text: 'write your name',
-      onChange: (newText) => setInputText(newText), // Capture input text
+      onChange: (newText: SetStateAction<string>) => setInputText(newText), // Capture input text
     },
     postUrl: `${NEXT_PUBLIC_URL}/api/frame?id=1`,
   });
