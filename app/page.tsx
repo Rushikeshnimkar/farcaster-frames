@@ -1,6 +1,7 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
+import { text } from 'stream/consumers';
 
 const frameMetadata = getFrameMetadata({
 
@@ -16,10 +17,12 @@ const frameMetadata = getFrameMetadata({
   },
   input: {
     text: 'write your name',
+    
   },
+  
   postUrl: `${NEXT_PUBLIC_URL}/api/frame?id=1`,
 });
-
+console.log('metadata',frameMetadata)
 export const metadata: Metadata = {
   title: 'zizzamia.xyz',
   description: 'LFG',
